@@ -30,5 +30,27 @@ walker run {
         family_tree ++> son;
         father +[child]+> son;
         mother +[child]+> son;
+        daughter = spawn node::person(
+            id = "9643482453V",
+            name = "Natali",
+            date_of_birth = "1998-02-01",
+            profession = "Student",
+            gender = "Female"
+        );
+        family_tree ++> daughter;
+        father +[child]+> daughter;
+        mother +[child]+> daughter;
+        son <+[siblings]+> daughter;
+        grandfather = spawn node::person(
+            id = "5643482895V",
+            name = "Bill",
+            date_of_birth = "1956-05-01",
+            profession = "Farmer",
+            gender = "Male"
+        );
+        family_tree ++> grandfather;
+        grandfather +[child]+> father;
+        grandfather +[grandchild]+> son;
+        grandfather +[grandchild]+> daughter;
     }
 }

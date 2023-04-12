@@ -1,5 +1,7 @@
 edge married;
 edge child;
+edge siblings;
+edge grandchild;
 
 node person {
     has id;
