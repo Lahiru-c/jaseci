@@ -1,10 +1,10 @@
 edge married;
 edge child;
-edge siblings;
-edge grandchild;
+edge member;
 
 node person {
     has id;
+    has family_id;
     has name;
     has date_of_birth;
     has profession;
@@ -14,7 +14,10 @@ node person {
     has children;
     has spouse;
 }
-node family_root;
+node family_root{
+    has id;
+    has family_name;
+}
 
 graph family_tree {
     has anchor family_root;
