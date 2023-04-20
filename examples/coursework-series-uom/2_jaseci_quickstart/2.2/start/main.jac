@@ -9,7 +9,7 @@ walker create_familytree {
         families = file.load_json(data_file)["families"];
         for family in families {
             spawn here ++> node::family_root(
-                id = family["uid"],
+                id = family["id"],
                 family_name = family["family_name"]
             );
         }
